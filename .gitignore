@@ -1,0 +1,5 @@
+.DS_Store
+*.pdf
+.claude/settings.local.json
+.claude/settings.json
+25-26/
