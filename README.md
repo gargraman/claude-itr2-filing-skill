@@ -1,6 +1,6 @@
 # claude-itr2-filing-skill
 
-A [Claude Code](https://claude.com/claude-code) / [Claude Agent SDK](https://docs.claude.com/en/api/agent-sdk) **skill** that guides a resident Indian individual through filing **ITR-2** for **AY 2026-27 (FY 2025-26)** — schedule by schedule, one at a time, with hard gates against guessed numbers and unconfirmed final JSON.
+A [Claude Code](https://claude.com/claude-code) / [Claude Agent SDK](https://docs.claude.com/en/api/agent-sdk) **skill** that guides a resident Indian individual through filing **ITR-2/3** for **AY 2026-27 (FY 2025-26)** — schedule by schedule, one at a time, with hard gates against guessed numbers and unconfirmed final JSON.
 
 > **This is not tax advice.** It is a structured assistant that helps you *organise* your own filing. Every number and disclosure remains your responsibility. Have a qualified Chartered Accountant review before you file, especially if you have foreign assets, capital gains, or brought-forward losses.
 
