@@ -6,6 +6,47 @@ Each template below has: **When to use**, the **template block**, and **rules fo
 
 ---
 
+## Template 0 — Form Selection (Step 1 sub-output — precedes Intake Summary)
+
+**When to use:** Immediately after the business/professional income screen in Step 1, before the full Intake Summary. This locks in ITR-2 vs ITR-3 for the rest of the workflow.
+
+```
+## Form Selection — AY 2026-27
+
+### Business / professional income screen
+| Source | Present? |
+|---|---|
+| F&O (equity/index/currency/commodity futures & options) | YES / NO |
+| Intraday equity trading | YES / NO |
+| Freelance / consulting / professional receipts | YES / NO |
+| Commission / brokerage income | YES / NO |
+| Partner in firm/LLP (remuneration/interest/share) | YES / NO |
+| Presumptive taxation election intended (44AD/44ADA/44AE) | YES / NO |
+
+### Decision
+- Any YES above → **ITR-3** (BETA — needs practitioner review)
+- All NO → **ITR-2**
+- Presumptive-only with no FA / no CG / one house / TI ≤ ₹50L → ITR-4 (out of scope — refer to CA)
+
+### Selected: **ITR-<2 or 3>**
+
+### Reason
+<one line — e.g., "F&O trading declared (Samco Tax P&L, ₹XX turnover) — ITR-3 required per Sec 43(5)(d) → business income → Schedule BP mandatory">
+
+### ITR-3-specific downstream implications (only if ITR-3 selected)
+- Schedules BP, PL, BS, ICDS become mandatory
+- Sec 44AB audit threshold check needed (₹1 Cr / ₹10 Cr digital / ₹75L profession, or ₹50L profession non-digital)
+- Sec 44AA books requirement check needed
+- Form 10-IEA lifetime restriction if opting Old regime — see `regimes.md`
+- Audit case ITR due 31-Oct-2026 (not 31-July-2026); Form 3CB+3CD due 30-Sep-2026
+```
+
+**Rules:**
+- Do not skip this template. Even if the answer is obviously ITR-2, run the screen and record the NOs — this creates a defensible record of why business income was NOT declared.
+- If ITR-3 selected, load `references/business-income.md` (and `references/fno-speculative.md` if F&O/intraday) BEFORE proceeding to Template 1.
+
+---
+
 ## Template 1 — Intake Summary (Step 1 output)
 
 **When to use:** End of Step 1 (intake & residency confirmation).
@@ -394,13 +435,102 @@ Or reply with any correction — I will revise this summary and re-request confi
 
 ---
 
+## Template 3B — ITR-3 Business/Profession Per-Schedule Block (variant)
+
+**When to use:** For ITR-3 filers only — Schedules BP, PL, BS, DPM, DOA, DEP, ICDS, IF, 44AD/ADA/AE. Use in place of Template 3 for these schedules.
+
+```
+### Schedule <BP / PL / BS / DPM / ICDS / etc.>
+
+**Why required for you**
+<trigger — e.g., "F&O turnover ₹XX per Samco Tax P&L → Sec 43(5)(d) non-speculative business → Schedule BP mandatory. Turnover < ₹10 Cr digital → no Sec 44AB audit triggered.">
+
+**Reference:** `references/business-income.md §<n>` (and `references/fno-speculative.md §<n>` if F&O)
+
+**Documents needed**
+- ✅ Broker Tax P&L FY 2025-26
+- ✅ Broker Ledger extract
+- ✅ Bank statement (payin/payout reconciliation)
+- ⚠️ NEEDS INPUT: <e.g., "Prior year Schedule CFL for b/f business loss claim">
+
+**Sec 44AA books check**
+- Turnover: ₹<>  |  Income: ₹<>  |  Prior-3-year threshold breach: YES/NO
+- Books required: YES / NO (per Sec 44AA(2))
+- Practical position: <"broker Tax P&L + bank statements accepted in lieu of formal books" — flag Sec 271A risk if scrutiny>
+
+**Sec 44AB audit check**
+- Threshold: <₹1 Cr / ₹10 Cr digital / ₹75L profession> = <chosen>
+- Turnover vs threshold: ₹<> vs ₹<> → audit REQUIRED / NOT REQUIRED
+- Sec 44AB(e) check (past 44AD election in last 5 years + current profit < 6%/8%): applicable? YES / NO
+- **If audit required:** Form 3CB+3CD by 30-Sep-2026, ITR by 31-Oct-2026 — CA sign-off mandatory.
+
+**Presumptive election (if considered)**
+- 44AD eligibility: YES / NO
+- 5-year lock-out warning acknowledged by user: YES / NO / N/A
+- Recommendation: <ELECT / DO NOT ELECT> — reason
+
+**Schedule PL (constructed from broker + bank)**
+| Row | Head | Amount (₹) |
+|---|---|---:|
+| Revenue — F&O realised P&L | | <> |
+| Revenue — intraday realised P&L (moves to BP Part D) | | <> |
+| Direct costs — brokerage + STT + exchange + SEBI + stamp + GST | | (<>) |
+| Indirect costs — internet, software, subscriptions | | (<>) |
+| Depreciation — computer (if capitalised) | | (<>) |
+| Interest — margin funding (if any) | | (<>) |
+| **Net profit before tax** | | **<>** |
+
+**Schedule BP roll-up**
+| Line | Amount (₹) |
+|---|---:|
+| Net profit from PL (Part A) | <> |
+| Add: disallowances (40A(3) cash, 43B unpaid, personal expenses) | <> |
+| Less: dep as per IT Act (Schedule DEP) | (<>) |
+| Less: Sec 43B paid | (<>) |
+| **Business income (non-spec)** | **<>** |
+| Speculative income (Part D — intraday) | <> |
+| **Total under head Business / Profession** | **<>** |
+
+**Schedule BS**
+| | Amount (₹) |
+|---|---:|
+| **Assets** | |
+| Bank balance (all trading-related accounts) | <> |
+| Broker credit balance / margin held | <> |
+| Fixed assets (net of dep) | <> |
+| **Total assets** | **<>** |
+| **Liabilities + Capital** | |
+| Loans (secured/unsecured) | <> |
+| Current liabilities | <> |
+| Capital account: opening + P&L − drawings | <> |
+| **Total** | **<>** |
+| Assets = Liab + Capital check | ✅ balanced / MISMATCH |
+
+**Cross-checks**
+- Broker Tax P&L period 1-Apr-2025 to 31-Mar-2026: ✅
+- Segment classification (F&O/intraday/delivery) preserved: ✅
+- Bank payin/payout ↔ broker ledger reconciled: ✅ / MISMATCH ₹<>
+- Turnover method: ICAI Guidance Note 2022 (|profit| + |loss|)
+
+**Next schedule:** <> — reply "continue" or provide NEEDS INPUT.
+```
+
+**Rules:**
+- If both books-required AND no formal books maintained → explicitly document the reliance on broker+bank as substitute, flag Sec 271A risk, get user acknowledgement.
+- For ICDS schedule, most rows are "no adjustment" — do NOT skip; disclose zero.
+- Schedule IF only if partner in firm — separate template block per firm.
+
+---
+
 ## Ordering summary
 
 | Step | Template | Output type | Blocks next step? |
 |---|---|---|---|
-| 1 | Template 1 — Intake Summary | Full page | Yes — need CONFIRMED / NEEDS INPUT resolved |
+| 1a | Template 0 — Form Selection | Table + decision | Yes — locks ITR-2 vs ITR-3 |
+| 1b | Template 1 — Intake Summary | Full page | Yes — need CONFIRMED / NEEDS INPUT resolved |
 | 2 | Template 2 — Schedule Triage | Table | Yes — resolve NEEDS INPUT |
 | 3 | Template 3 — Per-Schedule Block | One per message | Each schedule waits for user reply |
+| 3B | Template 3B — ITR-3 BP/PL/BS variant | One per message | ITR-3 only, replaces Template 3 for business schedules |
 | 4 | Template 4 — Reconciliation | Full page | Yes — resolve MISMATCH |
 | 5 | Template 5 — Regime Comparison | Full page | Recommend regime; then proceed |
 | 6 | Template 6 — Final Summary | Full page | **HARD GATE — require `CONFIRMED`** |

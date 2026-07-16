@@ -10,11 +10,11 @@ A [Claude Code](https://claude.com/claude-code) / [Claude Agent SDK](https://doc
 
 Walks a 7-step workflow:
 
-1. **Intake & residency** — Sec 6 test, PAN/Aadhaar, income & asset inventory.
-2. **Schedule triage** — which ITR-2 schedules actually apply to you.
+1. **Intake & residency + form selection (ITR-2 vs ITR-3)** — Sec 6 test, PAN/Aadhaar, income & asset inventory, business/professional income screen.
+2. **Schedule triage** — which schedules actually apply to you (branches by form).
 3. **Per-schedule data collection** — one schedule per message, `NEEDS INPUT:` for anything missing.
 4. **AIS/26AS/TIS reconciliation** — flag mismatches before they become notices.
-5. **Regime comparison** — Old vs New, with Chapter VI-A availability and 87A rebate.
+5. **Regime comparison** — Old vs New, with Chapter VI-A availability and 87A rebate. For ITR-3 filers, the Form 10-IEA lifetime switch-back restriction is called out explicitly.
 6. **Final calculation summary** — one page, both regimes, all sources.
 7. **JSON generation** — only after a literal `CONFIRMED`.
 
@@ -22,13 +22,24 @@ Walks a 7-step workflow:
 
 Handles:
 
+**ITR-2 (stable):**
 - Salary + Form 16 (single or multiple employers)
 - Bank interest, dividends
 - Prior-year losses (Schedule CYLA / BFLA / CFL)
 - Capital gains — Indian equity, mutual funds, foreign shares, RSUs, ESOPs (Schedule 112A grandfathering, Sec 111A / 112 / 112A / 50AA / 115BBH classification)
 - Foreign assets for a **Resident and Ordinarily Resident** — Schedule FA (calendar year), FSI, TR, Form 67, DTAA mechanics, Black Money Act awareness
 
-Does **not** cover: ITR-1/3/4, business/professional income, presumptive taxation, non-resident cases, or trust/HUF/company returns.
+**ITR-3 (BETA — needs practitioner review):**
+- All of the above, PLUS:
+- Business income — F&O (non-speculative, Sec 43(5)(d)), intraday equity (speculative, Sec 43(5)), freelance / consulting receipts, commission income, partner remuneration
+- Turnover computation per ICAI Guidance Note 2022 (|profit| + |loss| method)
+- Sec 44AA books requirement checks and Sec 44AB tax audit thresholds (₹1 Cr / ₹10 Cr digital / ₹75L profession / 6% profit test / 44AD opt-out audit)
+- Presumptive taxation — Sec 44AD (business, 6%/8% deemed), Sec 44ADA (profession, 50% deemed), Sec 44AE (transport) — with explicit 5-year lock-out warnings
+- Schedule BP / PL / BS / DPM / DOA / DEP / DCG / ICDS / IF / 44AD-ADA-AE
+- Sec 40A(3), 43B, 40(a)(ia) disallowances; depreciation rates per IT Rules Appendix I
+- **Form 10-IEA lifetime switch-back restriction** — permanent bar on Old regime after one switch-back is called out at both Step 5 and Step 6
+
+Does **not** cover: ITR-1 (Sahaj), ITR-4 (Sugam — presumptive shortcut for TI ≤ ₹50L, no FA, no CG, one house), ITR-5/6/7, non-resident cases, or trust/HUF/company returns.
 
 ### Hard gates baked into the skill
 
@@ -69,17 +80,19 @@ In Claude Code, type `/` — you should see `itr2-filing` in the skills list. Or
 ```
 SKILL.md                       # Entry point + 7-step workflow + hard gates
 references/                    # Load-on-demand reference files
-├── schedules.md              # All ITR-2 schedules, purpose, trigger rule, fields
-├── regimes.md                # Old vs New — slabs, standard deduction, 87A, surcharge
+├── schedules.md              # All ITR-2 schedules + ITR-3 appendix, purpose, trigger rule, fields
+├── regimes.md                # Old vs New — slabs, std ded, 87A, surcharge, Form 10-IEA lifetime bar
 ├── capital-gains.md          # Sec 111A/112A/112/50AA/115BBH, Schedule 112A grandfathering
 ├── foreign-assets.md         # Schedule FA, FSI, TR, Form 67, DTAA, Black Money Act
-├── losses.md                 # CYLA/BFLA/CFL, Sec 70/71/74/73, 8-yr c/f, Sec 80 bar
-├── documents-checklist.md    # What to gather before starting
-├── tax-savings.md            # Legit deductions/elections/timing levers, regime-tagged
-└── output-format.md          # Exact templates for each step's output
+├── losses.md                 # CYLA/BFLA/CFL, Sec 70/71/72/73/74, 8-yr / 4-yr c/f, Sec 80 bar
+├── documents-checklist.md    # What to gather before starting (incl. ITR-3 broker P&L, books)
+├── business-income.md        # [ITR-3 BETA] Schedule BP/PL/BS, 44AA books, 44AB audit, 44AD/ADA/AE
+├── fno-speculative.md        # [ITR-3 BETA] Sec 43(5) classification, ICAI 2022 turnover, broker Tax P&L
+├── tax-savings.md            # Legit deductions/elections/timing levers, regime-tagged; incl. business-income levers
+└── output-format.md          # Exact templates for Form Selection (T0), Intake (T1), Triage (T2), Per-Schedule (T3, T3B for ITR-3), Recon (T4), Regime (T5), Final Summary (T6), JSON (T7)
 ```
 
-Only the reference file whose topic is active gets loaded — keeps context clean.
+Only the reference file whose topic is active gets loaded — keeps context clean. ITR-3 files (`business-income.md`, `fno-speculative.md`) load only if Step 1 form selection determines ITR-3 is applicable.
 
 ---
 
@@ -87,8 +100,10 @@ Only the reference file whose topic is active gets loaded — keeps context clea
 
 - **AY 2026-27 / FY 2025-26** filing.
 - Reference cut-off: **30-June-2026**.
-- Utility/schema versions cited: ITR-2 Excel v1.1, JSON schema v1.1, Common Offline Utility v1.2.1 (01-Jul-2026), Notification 46/2026.
-- Filing due date: **31-July-2026** (non-audit individual). Belated/revised: **31-December-2026**.
+- Utility/schema versions cited: ITR-2 Excel v1.1, JSON schema v1.1, Common Offline Utility v1.2.1 (01-Jul-2026), Notification 46/2026. **ITR-3 utility version — user must verify from the portal before generating JSON.**
+- Filing due date: **31-July-2026** (non-audit individual). Audit case (ITR-3 with Sec 44AB audit): **31-October-2026**, with Form 3CB+3CD due **30-September-2026**. Belated/revised: **31-December-2026** regardless of category.
+
+**BETA warning for ITR-3:** `business-income.md` and `fno-speculative.md`, plus every ITR-3-specific block in the other reference files (schedules.md appendix, output-format.md Template 3B, tax-savings.md §5B), were drafted from the Income-tax Act 1961, Finance Act 2025, ICAI Guidance Note 2022, and mainstream practitioner sources — but have **not** been bit-verified against the live AY 2026-27 ITR-3 utility, Instructions PDF, or reviewed by a practising CA. Sections marked `[NEEDS-CA-REVIEW]` in those files require CA sign-off. For any ITR-3 filing produced via this skill, treat the final calculation as a draft for CA review, not a signed opinion.
 
 If you're filing for a different AY, this skill is not for you — Indian tax rules change every Budget and the references would be stale.
 

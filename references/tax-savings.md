@@ -214,6 +214,51 @@ Priority order by lock-in / return / liquidity:
 
 ---
 
+## 5B. Business-income levers `[ITR-3, BOTH regimes]`
+
+If the taxpayer has F&O, freelance, consulting, or other business/professional income, these levers apply in addition to §1-4 above.
+
+### 5B-a. All actual business expenses `[BOTH]`
+Every rupee spent for business is deductible under Schedule PL. For F&O / consultants specifically:
+- **Brokerage + STT + exchange fees + GST + SEBI + stamp duty** on F&O trades — fully deductible in Schedule PL.
+- **Internet, phone, software subscriptions** (trading platform, charting tool, cloud subscriptions) — deductible in proportion to business use.
+- **Home office** — proportion of rent, electricity, internet based on area used exclusively for business. Defensible only if provably exclusive (dedicated room, not shared).
+- **Laptop / trading rig depreciation** — 40% p.a. on computers if capitalised as business asset (Schedule DPM).
+- **Professional fees paid** (CA, consultant) — deductible with TDS obligation u/s 194J if > ₹30,000/annum to single professional.
+- **Travel for business** — client meetings, conferences.
+
+**Trap:** Personal expenses debited to business account. Sec 37(1) explicitly disallows. Rule of thumb: if you'd have spent it anyway (personal Netflix, personal groceries), don't route through business.
+
+### 5B-b. 44AD election — trade-off `[ITR-3]`
+- If your F&O profit is consistently > 6% of turnover and turnover ≤ ₹3 Cr, 44AD election eliminates books requirement AND audit requirement.
+- But **5-year lock-out** on opting out (Sec 44AD(4)): once you elect 44AD and later go back to actual profits (declaring less than 6%), Sec 44AB(e) audit is triggered for the next 5 years if income > basic exemption.
+- **When it makes sense:** consistently profitable smaller trader, turnover < ₹1 Cr, no plans to scale or diversify.
+- **When it doesn't:** volatile profitability (typical F&O), any expectation of future loss year, high turnover approaching ₹3 Cr cap.
+- See `references/fno-speculative.md §6` for detailed analysis.
+
+### 5B-c. Sec 43B timing lever `[ITR-3]`
+- Statutory dues (GST, PF, ESI, gratuity, interest to banks) are deductible only in the year of actual payment (Sec 43B).
+- **Lever:** pay these before 31-March to claim deduction in current FY; delayed payment shifts deduction to next FY.
+- Practical only for freelancers with staff / GST liability. F&O-only filer usually has no 43B items.
+
+### 5B-d. Additional depreciation on new plant `[ITR-3, manufacturing]`
+- Sec 32(1)(iia): extra 20% depreciation in year of purchase for new eligible plant & machinery in a manufacturing/production business.
+- Half-rate (10%) if used < 180 days in first year.
+- Not applicable to office equipment, furniture, vehicles, or trading-only businesses.
+
+### 5B-e. Advance tax quarters for business income `[ITR-3]`
+- Non-presumptive business: standard quarterly (15-Jun 15%, 15-Sep 45%, 15-Dec 75%, 15-Mar 100%).
+- **Presumptive 44AD / 44ADA:** entire liability payable by **15-March** — single installment (Sec 211 proviso). Skip earlier installments without 234C interest.
+- F&O windfall in Q4: Sec 234C proviso — advance tax on unexpected Q4 profit is due 15-March, not backdated.
+
+### 5B-f. Form 10-IEA regime election — lifetime consequence `[ITR-3]`
+- Not a "saving lever" in isolation — but a critical decision with permanent effect.
+- ITR-3 filer opting for Old regime files 10-IEA before 31-Jul-2026 (or 31-Oct if audit).
+- Can switch back to New **only ONCE lifetime**. After switch-back, Old is barred forever.
+- **Before electing Old:** compute both regimes for AT LEAST 3 forward-looking scenarios (current + likely income trajectory). Only elect Old if it wins by ≥ ₹50K AND you don't expect income to grow into 30% slab dominance.
+
+---
+
 ## 6. What NOT to do
 
 Avoid these. All are either evasion, deliberate misreporting, or legally risky:

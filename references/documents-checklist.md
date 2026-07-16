@@ -144,6 +144,68 @@ Non-negotiable pre-filing step. Download all three:
 
 **Any mismatch → resolve BEFORE filing** — either update ITR to match, or submit AIS Feedback with correction (accept/reject/duplicate). CPC uses AIS for automated 143(1) reconciliation.
 
+## I2. [ITR-3 only, BETA] Business / Professional income — Schedule BP / PL / BS
+
+Load only if Step 1 form selection determined ITR-3. Every item below is a hard requirement for defending the return in scrutiny.
+
+### F&O / Intraday trading (Sec 43(5) business income)
+| Document | Why needed |
+|---|---|
+| **Broker Tax P&L (FY 2025-26)** — Zerodha Console, Groww Tax Statement, Samco Tax P&L, Upstox etc. | Realised P&L per segment (delivery / intraday / F&O / currency / commodity); turnover per ICAI 2022 method |
+| **Broker Ledger extract (FY 2025-26)** | Every payin/payout, brokerage debits, dividend credits — reconciles to bank statements |
+| **Contract notes** (retained, not always attached) | Trade-by-trade backup for scrutiny |
+| **Broker charges statement** — brokerage + STT + exchange fees + SEBI + stamp + GST on brokerage | Direct costs deductible in Schedule PL |
+| **Bank statements** (all bank accounts used for trading capital, 12 months) | Reconcile payin/payout to broker; capital account working |
+| **Loan statement** (if any borrowing to fund trading capital) | Interest deductible in PL under Sec 36(1)(iii) if wholly for business — defensible if traced |
+| **Prior year ITR-3 + Schedule CFL** (if any b/f business / speculative loss) | c/f claim under Sec 72 / 73(4) |
+
+**Cross-check protocol:**
+- Broker Tax P&L period MUST be 1-Apr-2025 to 31-Mar-2026 (not calendar year).
+- Segment classification confirmed: F&O = non-spec BP; Intraday = spec BP Part D; Delivery = Schedule CG.
+- Turnover computation note in broker PDF states "ICAI Guidance Note 2022" or equivalent method.
+- Bank payin/payout matches broker ledger — flag any gap > ₹1,000.
+
+### Freelance / Consulting / Professional receipts
+| Document | Why needed |
+|---|---|
+| **Invoices raised (all)** for FY 2025-26 | Gross receipts under Sec 44ADA or Schedule PL revenue |
+| **Form 26AS** — Sec 194J TDS entries by clients | TDS credit under Schedule 20C |
+| **Bank statements** — verify each client credit against invoice | Completeness of receipts |
+| **Foreign client invoices + FIRC / FIRA / GST-LUT** | Export-of-service classification, foreign receipts under Schedule OS / BP |
+| **Expense receipts** — laptop / software / phone / internet / office rent / travel / co-working | Deductible under Schedule PL (if books maintained) or ignored under 44ADA (50% deemed profit) |
+| **Depreciation register** (if any capitalised asset > ₹5,000 useful life > 1 year) | Schedule DPM/DOA |
+| **Home-office proportion working** (if claiming) | Area × utility bills; defensible only if exclusive use |
+
+### Partnership firm partner
+| Document | Why needed |
+|---|---|
+| **Partnership deed** | Sec 40(b) allowable remuneration + interest computation |
+| **Firm's Form 26AS / TDS certs on partner payments** | If firm deducted TDS on remuneration |
+| **Firm's audited P&L + BS + tax computation** | Share of profit (exempt u/s 10(2A)), remuneration, interest — for Schedule IF |
+| **Firm's ITR-V** (once filed) | Cross-verification |
+
+### Presumptive taxation (44AD / 44ADA / 44AE)
+| Document | Why needed |
+|---|---|
+| **Turnover / gross receipts statement** | Deemed profit computation |
+| **Split of digital vs cash receipts** (44AD 6% vs 8% rate) | Rate applied |
+| **Prior 5 years' declaration history** — did the taxpayer opt in/out of 44AD in AY 2021-22, 22-23, 23-24, 24-25, 25-26? | 5-year lock-out under Sec 44AD(4) |
+| **Advance tax by 15-March** — challan | Sec 211 proviso — single installment for presumptive |
+
+### Tax audit (Sec 44AB) — if applicable
+| Document | Why needed |
+|---|---|
+| **Form 3CA (or 3CB) + Form 3CD** signed by CA | Uploaded to portal by CA at least 1 month before ITR |
+| **Audit UDIN** from CA | CBDT-mandatory UDIN linkage |
+| **All schedules cross-verified by CA** | Sign-off before ITR upload |
+
+**Audit due dates for AY 2026-27:**
+- Tax audit report (3CB+3CD) upload by CA: **30-September-2026**
+- Audit-case ITR-3 filing: **31-October-2026**
+- Belated: same 31-December-2026 (with penalties + loss c/f loss)
+
+---
+
 ## J. Miscellaneous safety documents
 
 - Passport travel history (dates in/out of India) — for residency day count (Sec 6)

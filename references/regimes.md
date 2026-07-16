@@ -4,8 +4,11 @@
 
 **Opt-out mechanics for AY 2026-27:**
 - **Salaried, no business/profession income (typical ITR-2 filer):** No Form 10-IEA required. Simply toggle the "opting out of new regime u/s 115BAC" checkbox to Yes in Part A-GEN of ITR-2. Toggleable year-to-year, unlimited times.
-- **With business/profession income (ITR-3):** Form 10-IEA MANDATORY, filed online before 31-July-2026. Once opted out via 10-IEA, you can switch back to new regime only ONCE; after switching back, you cannot re-elect old for any future year.
-- **Belated return (139(4)):** Old regime CANNOT be elected. Return is locked into new regime. Applies to both salaried and business filers.
+- **With business/profession income (ITR-3 filer):** Form 10-IEA MANDATORY, filed online **before the ITR due date u/s 139(1)** — 31-July-2026 for non-audit, 31-October-2026 for audit case. If filed after this date, opt-out is invalid and return is treated under New regime by default.
+  - **Lifetime switch-back restriction (Sec 115BAC(6)):** Once an ITR-3 filer has opted out of New regime via 10-IEA, they can switch back to New regime **only ONCE lifetime**. After that switch-back, Old regime is **permanently barred** for that PAN — cannot re-elect for any future AY. This is the single most consequential decision an ITR-3 filer makes.
+  - **Practical guidance for F&O / consulting filer:** Compute both regimes before filing. Do NOT default to Old just because it was better in a salaried past. If New wins for this AY, stay in New (no 10-IEA). If Old wins by a small margin, weigh the loss of future flexibility vs the one-year saving — often better to stay in New unless Old wins by ≥ ₹50K.
+  - **When New later becomes clearly better** (e.g., income grows and 30% slab dominates deductions), the one-time switch-back is available — but that's the last chance. Plan accordingly.
+- **Belated return (139(4)):** Old regime CANNOT be elected. Return is locked into new regime. Applies to both salaried (ITR-2) and business (ITR-3) filers.
 
 ---
 

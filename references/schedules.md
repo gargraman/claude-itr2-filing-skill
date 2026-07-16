@@ -286,6 +286,91 @@ Rationale for order: source-of-income schedules first, then set-off/carry-forwar
 
 ---
 
+## Appendix — ITR-3 additional schedules (BETA)
+
+> **When to use this appendix:** Only if Step 1 form selection determined ITR-3 (any business or professional income — F&O, intraday, freelance, presumptive, partner in firm, etc.). ITR-3 also includes ALL ITR-2 schedules above (salary, HP, CG, OS, FA, etc.) — this appendix lists the ITR-3-only additions.
+>
+> **BETA — needs practitioner review.** Field structure below reflects Act + AY 2025-26 utility patterns; cross-check every field against the current AY 2026-27 ITR-3 utility from `https://www.incometax.gov.in/iec/foportal/downloads/income-tax-returns` before generating JSON.
+
+**Related refs:** `references/business-income.md` for Sec 44AA / 44AB / 44AD mechanics and Schedule BP/PL/BS/DEP structure; `references/fno-speculative.md` for F&O and intraday equity turnover and classification.
+
+### ITR-3.1 Schedule BP — Computation of income from Business or Profession
+- **Purpose:** Reconciles net profit from Schedule PL (or presumptive computation) to taxable business income via additions (disallowances, dep as per Cos Act) and deductions (dep as per IT Act, Sec 43B paid, etc.). Separate line for speculative business (Part D).
+- **Trigger:** Any business or professional income.
+- **Key sub-sections:** Part A (from PL), Part B (additions), Part C (deductions), Part D (speculation), Part E (Sec 35AD specified business).
+- **Load `references/business-income.md §5`.**
+
+### ITR-3.2 Schedule PL — Profit and Loss Statement
+- **Purpose:** Full P&L: revenue, purchases, direct/indirect expenses, depreciation, salaries, interest, other expenses, net profit before tax. `[SECONDARY-SOURCE]` on exact row count (~60 rows).
+- **Trigger:** Non-presumptive business/profession where books are maintained (Sec 44AA(2)).
+- **F&O-only filer construction:** revenue = realised P&L; direct costs = brokerage + STT + GST + exchange + SEBI + stamp; indirect costs = internet, software, home-office proportion (if defensible). See `references/business-income.md §6`.
+- **No-account case:** abbreviated 4-line entry (gross receipts, gross profit, expenses, net profit) if under Sec 44AA(2) proviso thresholds (₹2.5L income AND ₹25L turnover for individual/HUF).
+
+### ITR-3.3 Schedule BS — Balance Sheet
+- **Purpose:** Assets, liabilities, capital account snapshot as on 31-Mar-2026.
+- **Trigger:** Non-presumptive business where books are maintained.
+- **F&O-only filer construction:** bank + broker balance = assets; loans (if any) = liabilities; opening capital + net trading profit − drawings = closing capital. See `references/business-income.md §7`.
+- **No-account case:** abbreviated to closing bank/cash + closing debtors/creditors.
+
+### ITR-3.4 Schedule DPM — Depreciation on Plant & Machinery
+- **Purpose:** Block-of-assets working for P&M depreciation under IT Act Rule 5 read with Appendix I.
+- **Trigger:** Any P&M or computer/software used in business.
+- **Rates:** P&M general 15%, computers 40%, motor cars 15%. Additional depreciation 20% (Sec 32(1)(iia)) for new eligible P&M in manufacturing.
+- **Typically NA for F&O-only filers** (no P&M in F&O business unless laptop is capitalised).
+
+### ITR-3.5 Schedule DOA — Depreciation on Other Assets
+- **Purpose:** Building, furniture, intangibles.
+- **Rates:** Buildings residential 5% / non-residential 10%; furniture 10%; intangibles 25%; books (for professionals) 40%.
+- **Typically NA for F&O-only filers.**
+
+### ITR-3.6 Schedule DEP — Summary of Depreciation
+- **Purpose:** Roll-up of DPM + DOA totals for the year.
+- **Trigger:** Any entry in DPM or DOA.
+
+### ITR-3.7 Schedule DCG — Deemed Capital Gains on sale of depreciable assets
+- **Purpose:** Sec 50 short-term capital gain on sale of depreciable assets when block WDV goes negative or entire block sold.
+- **Trigger:** Only if a depreciable asset was sold during FY.
+- **Typically NA for F&O-only filers.**
+
+### ITR-3.8 Schedule ESR — Expenditure on Scientific Research (Sec 35)
+- **Purpose:** Deduction for expenditure on scientific research (in-house or contribution to approved institution).
+- **Trigger:** Rare for individual filers. Skip unless flagged.
+
+### ITR-3.9 Schedules 44AD / 44ADA / 44AE — Presumptive taxation
+- **Purpose:** Simplified computation for eligible presumptive business/profession.
+- **Trigger:** Only if presumptive election is made in the current AY.
+- **Fields:** Gross turnover (44AD) / gross receipts (44ADA), digital vs cash split, deemed profit (6%/8% for 44AD; 50% for 44ADA), actual profit if higher, aggregate turnover check against ₹3 Cr / ₹75L caps.
+- **Warning:** Sec 44AD(4) five-year lock-out on opt-out. See `references/business-income.md §4` and `references/fno-speculative.md §6`.
+
+### ITR-3.10 Schedule ICDS — Income Computation Disclosure Standards
+- **Purpose:** Disclosure of adjustments per 10 notified ICDS (I to X) for non-presumptive business income.
+- **Trigger:** Mandatory for all non-presumptive business/profession income.
+- **Typical individual filer:** most ICDS have nil impact for a service/trading business; disclose as such (zero adjustment) — but the schedule must be filled, not skipped.
+
+### ITR-3.11 Schedule IF — Information on Partnership Firms
+- **Purpose:** Details of every partnership firm/LLP in which the taxpayer is a partner — firm name, PAN, share %, capital, remuneration, interest received.
+- **Trigger:** Only if partner in a firm/LLP.
+
+### ITR-3 Filing Order (append after ITR-2 filing order above)
+
+For ITR-3, insert these AFTER Schedule OS and BEFORE Schedule CYLA in the walkthrough:
+
+```
+5a. Schedule BP (with BP Part D — speculation — as sub-block)
+5b. Schedule PL (feeds BP Part A)
+5c. Schedule BS
+5d. Schedule DPM / DOA / DEP (only if applicable)
+5e. Schedule DCG (only if applicable)
+5f. Schedule ESR (only if applicable)
+5g. Schedule 44AD / 44ADA / 44AE (only if presumptive)
+5h. Schedule ICDS (mandatory for non-presumptive)
+5i. Schedule IF (only if partner in firm)
+```
+
+CYLA now consumes the business-loss line as well as HP/CG losses. CFL now tracks both non-spec business (Sec 72, 8-yr) and speculative (Sec 73(4), 4-yr) buckets.
+
+---
+
 ## Schedules NOT applicable to standard resident-individual profile
 
 - Schedule 115AD proviso row (FII only)
