@@ -99,9 +99,17 @@ Only the reference file whose topic is active gets loaded — keeps context clea
 ## Version scope
 
 - **AY 2026-27 / FY 2025-26** filing.
-- Reference cut-off: **30-June-2026**.
-- Utility/schema versions cited: ITR-2 Excel v1.1, JSON schema v1.1, Common Offline Utility v1.2.1 (01-Jul-2026), Notification 46/2026. **ITR-3 utility version — user must verify from the portal before generating JSON.**
-- Filing due date: **31-July-2026** (non-audit individual). Audit case (ITR-3 with Sec 44AB audit): **31-October-2026**, with Form 3CB+3CD due **30-September-2026**. Belated/revised: **31-December-2026** regardless of category.
+- Reference cut-off for tax rules: **30-June-2026**.
+- Utility/schema versions (verified against `incometax.gov.in` downloads page on **17-July-2026**):
+  - **ITR-2** — Excel utility v1.1 (30-Jun-2026), JSON schema v1.1 (30-Jun-2026)
+  - **ITR-3** — Excel utility v1.1 (30-Jun-2026), JSON schema v1.1 (30-Jun-2026)
+  - **Common Offline Utility** (ITR 1/2/3/4) v1.2.1 (01-Jul-2026)
+  - Notification 46/2026
+  - Re-verify before generating JSON if today is materially later than the verification date above — utility bumps mid-season are routine.
+- Filing due dates:
+  - **Non-audit individual (ITR-2, or ITR-3 without Sec 44AB audit): 31-July-2026** — **~2 weeks away as of the verification date above.**
+  - Audit case (ITR-3 with Sec 44AB audit): **31-October-2026**, with Form 3CB+3CD due **30-September-2026**.
+  - Belated/revised: **31-December-2026** regardless of category — but a belated return **forfeits carry-forward of capital, business, and speculation losses (Sec 80)** and **forces New regime**.
 
 **BETA warning for ITR-3:** `business-income.md` and `fno-speculative.md`, plus every ITR-3-specific block in the other reference files (schedules.md appendix, output-format.md Template 3B, tax-savings.md §5B), were drafted from the Income-tax Act 1961, Finance Act 2025, ICAI Guidance Note 2022, and mainstream practitioner sources — but have **not** been bit-verified against the live AY 2026-27 ITR-3 utility, Instructions PDF, or reviewed by a practising CA. Sections marked `[NEEDS-CA-REVIEW]` in those files require CA sign-off. For any ITR-3 filing produced via this skill, treat the final calculation as a draft for CA review, not a signed opinion.
 
