@@ -14,7 +14,8 @@
 | Unlisted equity share (Indian) | 24 months | Slab | **Sec 112 @ 12.5% (no indexation)** |
 | **Foreign shares / RSUs / ESOPs / ESPP (any foreign exchange listing)** | **24 months** | **Slab** (Sec 111A NOT applicable — no STT on Indian recognised exchange) | **Sec 112 @ 12.5% (no indexation, no forex adjustment for residents)** |
 | Immovable property (land/building) | 24 months | Slab | **Sec 112 @ 12.5% no-index OR 20% with-index (lower) — pre-23-Jul-2024 acquisitions, RESIDENT INDIVIDUAL / HUF ONLY** |
-| Gold, jewellery, silver, other listed bonds (non-equity) | 24 months | Slab | **Sec 112 @ 12.5% (no indexation)** |
+| Gold, jewellery, silver, unlisted bonds/debentures | 24 months | Slab | **Sec 112 @ 12.5% (no indexation)** |
+| Listed bonds / debentures / securities (recognised Indian exchange, non-equity) | **12 months** | Slab | **Sec 112 @ 12.5% (no indexation)** |
 | Debt mutual fund units acquired on/after 1-Apr-2023 | N/A — always STCG | **Sec 50AA — always STCG at slab regardless of holding period** | N/A |
 | Debt mutual fund units acquired before 1-Apr-2023 | 24 months | Slab | Sec 112 @ 12.5% (no indexation post-23-Jul-2024) |
 | Cryptocurrency / VDA | N/A | **Sec 115BBH @ 30% flat, no set-off, no c/f** | Same |

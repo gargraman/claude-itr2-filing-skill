@@ -29,7 +29,7 @@
 
 Set off b/f losses from prior AYs against current year income of same head (with cross-head allowance for HP loss).
 
-- **HP loss b/f (Sec 71B):** offset against current-year HP income; can also offset other heads under old regime (subject to ₹2L Sec 71(3A) — but Sec 71B allows c/f offset only against HP income, per some readings; safer position is HP income only for b/f).
+- **HP loss b/f (Sec 71B):** set off **only against current-year House Property income** in the 8 succeeding AYs. (The inter-head route and the ₹2L cap under Sec 71(3A) apply only to a *current-year* HP loss — not to a brought-forward HP loss.)
 - **Business loss b/f (Sec 72):** offset against current-year business income only. Non-speculative → any business; speculative → speculative only (Sec 73(2)).
 - **Speculation loss b/f (Sec 73(2)):** speculative income only.
 - **STCL b/f (Sec 74):** against STCG or LTCG (current-year).
@@ -70,20 +70,25 @@ Set off b/f losses from prior AYs against current year income of same head (with
 
 ## 5. Schedule CYLA — Current Year Loss Adjustment
 
-Auto-computed once inputs are entered. Grid:
+Auto-computed once inputs are entered. **Rows = the head the loss originates in; columns = the head of income that can absorb it** (same year, after intra-head Sec 70 set-off). ✓ = allowed, ✗ = barred.
 
-| Head where loss originates → | Salary | HP | Business | STCG | LTCG | IFOS |
-|---|---|---|---|---|---|---|
-| Salary income | — | Cannot offset | Cannot offset | Cannot offset | Cannot offset | Cannot offset |
-| HP income | Absorb (up to ₹2L) | — | Absorb | Absorb | Absorb | Absorb |
-| Business income (non-spec) | Cannot | Absorb (up to ₹2L) | — | Cannot | Cannot | Absorb |
-| Speculation income | Cannot | Cannot | Cannot | Cannot | Cannot | Cannot (only speculation loss) |
-| STCG | Cannot | Absorb (up to ₹2L) | Absorb | — | Absorb | Absorb |
-| LTCG | Cannot | Absorb (up to ₹2L) | Absorb | Absorb | — | Absorb |
-| IFOS (slab-rate) | Cannot | Absorb (up to ₹2L) | Absorb | Cannot | Cannot | — |
-| VDA (special-rate) | Never absorbs any loss | — | — | — | — | — |
+| Loss originates ↓ / absorbed by → | Salary | HP | Business (non-spec) | Speculation | STCG | LTCG | IFOS |
+|---|---|---|---|---|---|---|---|
+| **HP loss** | ✓¹ | — | ✓¹ | ✓¹ | ✓¹ | ✓¹ | ✓¹ |
+| **Business loss (non-spec)** | ✗ (Sec 71(2A)) | ✓ | — | ✓ | ✓ | ✓ | ✓ |
+| **Speculation loss** | ✗ | ✗ | ✗ | ✓ | ✗ | ✗ | ✗ |
+| **STCL** | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ | ✗ |
+| **LTCL** | ✗ | ✗ | ✗ | ✗ | ✗ (Sec 70(3)) | ✓ | ✗ |
+| **IFOS loss** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| **VDA loss** | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
 
-Read: "Loss originates in row X, absorbed by income in column Y."
+**¹ HP loss:** inter-head set-off is capped at **₹2,00,000 aggregate per year** (Sec 71(3A)); any balance carries forward. Under the **new regime** (Sec 115BAC(2)(i)) HP loss cannot be set off against any other head at all — it goes straight to Schedule CFL.
+
+**Notes:**
+- There is no "Salary loss" row — a loss cannot arise under the salary head.
+- **Capital losses (STCL/LTCL) are intra-head only (Sec 71(3))** — they never reach salary, HP, business, or IFOS. STCL absorbs STCG then LTCG (Sec 70(2)); LTCL absorbs LTCG only (Sec 70(3)).
+- **Only a business loss is barred from salary** (Sec 71(2A)); an IFOS or HP loss may offset salary.
+- **VDA loss (Sec 115BBH(2))** absorbs nothing — not even other VDA gains — and does not carry forward.
 
 ## 6. Schedule BFLA — Brought Forward Loss Adjustment
 

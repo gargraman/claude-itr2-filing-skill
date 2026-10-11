@@ -47,7 +47,7 @@ Has any business/profession income? ──── NO ──→ ITR-2 (see rest of
 ### Specified professions (Sec 44AA(1))
 Legal, medical, engineering, architectural, accountancy, technical consultancy, interior decoration, film artist, authorised representative, company secretary, information technology (added by CBDT Notification 4/2001).
 
-**Rule:** Must maintain **prescribed books** (Rule 6F: cash book, journal, ledger, carbon copies of bills > ₹25, original bills for expenses > ₹50, plus for medical: daily case register + inventory of drugs) if gross receipts > **₹1,50,000** in any of the 3 preceding PYs (or the current PY if profession is new).
+**Rule:** Must maintain **prescribed books** (Rule 6F: cash book, journal, ledger, carbon copies of bills > ₹25, original bills for expenses > ₹50, plus for medical: daily case register + inventory of drugs) if gross receipts exceed **₹1,50,000** in **all three** immediately preceding PYs (for a continuing profession), or — for a new profession — if receipts are *likely* to exceed ₹1,50,000 in the current PY. (The "any one of 3 years" test is the Sec 44AA(2) rule for non-specified business below — do NOT apply it to Rule 6F.)
 
 ### Other businesses / non-specified professions (Sec 44AA(2))
 **Rule:** Must maintain **such books as will enable AO to compute total income** if:
@@ -100,7 +100,7 @@ F&O turnover as computed under ICAI method almost never exceeds ₹10 Cr for an 
 ### Sec 44ADA — specified professions
 - **Eligible:** Resident individual / HUF / firm (not LLP) in a Sec 44AA(1) specified profession, gross receipts ≤ **₹75 lakh** for FY 2025-26 (raised from ₹50L by FA 2023 provided cash receipts ≤ 5% of turnover; else ₹50L).
 - **Deemed profit:** 50% of receipts. Higher declaration allowed.
-- **Same 5-year lock-out** applies (Sec 44ADA(4) — verify wording; via 44AB(d)). `[NEEDS-CA-REVIEW]`
+- **No 5-year lock-out** (unlike 44AD). A professional may opt into or out of 44ADA year by year. Sec 44ADA(4) only triggers books + audit **if** profit is declared below 50% **and** total income exceeds the basic exemption limit (→ Sec 44AB(d) audit) — it is not a lock-out.
 - **Attractive for:** consultants, freelance software engineers, doctors, lawyers with genuinely > 50% effective margin.
 
 ### Sec 44AE — transport
@@ -109,7 +109,7 @@ F&O turnover as computed under ICAI method almost never exceeds ₹10 Cr for an 
 
 ### Books & audit exemption under presumptive
 If income declared per presumptive scheme:
-- Sec 44AA books requirement waived (Sec 44AD(5) / 44ADA(4)).
+- Sec 44AA books requirement waived — for a filer who actually declares at or above the presumptive rate. (Note: Sec 44AD(5) / 44ADA(4) are not the source of this waiver — they are the provisions that *re-impose* books + audit when a filer declares BELOW the presumptive rate with total income above the basic exemption limit.)
 - Sec 44AB audit waived (unless the lock-out audit under §3 kicks in).
 
 ### Advance tax under presumptive

@@ -33,7 +33,7 @@ Handles:
 - All of the above, PLUS:
 - Business income — F&O (non-speculative, Sec 43(5)(d)), intraday equity (speculative, Sec 43(5)), freelance / consulting receipts, commission income, partner remuneration
 - Turnover computation per ICAI Guidance Note 2022 (|profit| + |loss| method)
-- Sec 44AA books requirement checks and Sec 44AB tax audit thresholds (₹1 Cr / ₹10 Cr digital / ₹75L profession / 6% profit test / 44AD opt-out audit)
+- Sec 44AA books requirement checks and Sec 44AB tax audit thresholds (business ₹1 Cr / ₹10 Cr digital; profession ₹50L; 6% profit test / 44AD opt-out audit)
 - Presumptive taxation — Sec 44AD (business, 6%/8% deemed), Sec 44ADA (profession, 50% deemed), Sec 44AE (transport) — with explicit 5-year lock-out warnings
 - Schedule BP / PL / BS / DPM / DOA / DEP / DCG / ICDS / IF / 44AD-ADA-AE
 - Sec 40A(3), 43B, 40(a)(ia) disallowances; depreciation rates per IT Rules Appendix I
@@ -107,7 +107,7 @@ Only the reference file whose topic is active gets loaded — keeps context clea
   - Notification 46/2026
   - Re-verify before generating JSON if today is materially later than the verification date above — utility bumps mid-season are routine.
 - Filing due dates:
-  - **Non-audit individual (ITR-2, or ITR-3 without Sec 44AB audit): 31-July-2026** — **~2 weeks away as of the verification date above.**
+  - **Non-audit individual (ITR-2, or ITR-3 without Sec 44AB audit): 31-July-2026** — **this deadline has now passed; such filers are in the belated/revised window only, until 31-Dec-2026 (see below), which forfeits loss carry-forward and forces the New regime.**
   - Audit case (ITR-3 with Sec 44AB audit): **31-October-2026**, with Form 3CB+3CD due **30-September-2026**.
   - Belated/revised: **31-December-2026** regardless of category — but a belated return **forfeits carry-forward of capital, business, and speculation losses (Sec 80)** and **forces New regime**.
 

@@ -16,7 +16,8 @@
 
 | Activity | Head of income | Section basis |
 |---|---|---|
-| **F&O (equity, index, commodity, currency futures & options)** on a recognised stock exchange | **Non-speculative business** | Sec 43(5) proviso (d) — F&O on recognised exchanges is expressly excluded from "speculative transaction" definition |
+| **F&O (equity, index, currency futures & options)** on a recognised stock exchange | **Non-speculative business** | Sec 43(5) proviso **(d)** — eligible derivative transaction on a recognised exchange, excluded from "speculative transaction" |
+| **Commodity derivatives** on a recognised association (CTT paid) | **Non-speculative business** | Sec 43(5) proviso **(e)** (FA 2013) — separate clause from (d); see note below |
 | **Intraday equity** — buy and square-off same day on cash market | **Speculative business** | Sec 43(5) — no delivery = speculative |
 | **Delivery-based equity** — bought, held ≥ 1 day, sold | **Capital gains** (STCG < 12 mo, LTCG ≥ 12 mo) | Sec 2(14), Sec 45. Covered in `capital-gains.md`. |
 | Jobbing / arbitrage in cash equity without delivery | Speculative business | Sec 43(5) |
@@ -159,8 +160,7 @@ Salary ₹40L, F&O profit ₹2L, intraday loss ₹50K.
 
 ### Scenario C — F&O loss + delivery LTCG
 F&O loss ₹1.5L, delivery equity LTCG ₹5L (₹3.75L taxable after ₹1.25L 112A exemption).
-- F&O loss (non-spec business) — under Sec 71 CANNOT offset LTCG per Sec 71(3): "capital loss cannot offset non-capital heads" — but this reads the other way? Let me re-check.
-- **Actually Sec 71(2A):** business loss cannot offset SALARY. It CAN offset CG per Sec 71. So F&O loss ₹1.5L → offsets ₹1.5L of the taxable LTCG.
+- **Sec 71(2A)** bars a non-speculative business loss only from being set off against **salary** — it may be set off against any other head, including capital gains (Sec 71(1)/(2)). The reverse bar in Sec 71(3) (capital loss cannot offset non-capital heads) does not apply here. So the F&O loss ₹1.5L offsets ₹1.5L of the taxable LTCG.
 - Remaining LTCG taxable ₹2.25L @ 12.5% = ₹28,125 + cess. F&O loss fully consumed same year.
 
 ### Scenario D — c/f from prior years
