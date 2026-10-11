@@ -218,7 +218,7 @@ For each schedule below: **Code — Official Name — Purpose — Trigger — Ke
 ### 25. Schedule AL — Assets and Liabilities
 - **Official name:** Assets and Liabilities at the end of the year
 - **Purpose:** Balance sheet snapshot as on 31-Mar-2026 — immovable property, movable assets (jewellery, vehicles, art, financial assets), corresponding liabilities.
-- **Trigger:** Total income > **₹1 crore** for AY 2026-27 `[SECONDARY-SOURCE]` — threshold reportedly raised from ₹50L in AY 2025-26 to ₹1 Cr for AY 2026-27. **VERIFY in the utility before assuming a ₹75L filer can skip this**; if the utility still uses ₹50L, apply the lower threshold.
+- **Trigger:** Total income > **₹1 crore** for AY 2026-27 `[SECONDARY-SOURCE]` — this ₹1 Cr threshold has applied since **AY 2025-26** (raised from the earlier ₹50L), and ITR-2 retains it for AY 2026-27. **VERIFY in the utility before assuming a ₹75L filer can skip this**; if the utility still uses ₹50L, apply the lower threshold.
 - **Fields:** Cost of each asset, description, address (for immovable), corresponding liability.
 
 ### 26. Schedule "Tax deferred on ESOP" (start-up ESOP tracker)

@@ -64,7 +64,7 @@ Mark each item **AVAILABLE**, **NEEDS INPUT**, or **NOT APPLICABLE** during Step
 | **VDA (crypto) exchange statement** — per transaction (date, coin, quantity, INR price, TDS) | Schedule VDA |
 | **Sec 194S TDS certificate** for VDA | Schedule 20C credit |
 | **Debt MF acquisition date + purchase invoice** (pre or post 1-Apr-2023 flag) | Sec 50AA classification |
-| **Deduction proofs** — 54EC bonds (NHAI/REC/PFC/IRFC ≤ ₹50L within 6 months of transfer), 54F property purchase deed, etc. | Schedule CG Part D deduction |
+| **Deduction proofs** — 54EC bonds (REC/PFC/IRFC/HUDCO ≤ ₹50L within 6 months of transfer), 54F property purchase deed, etc. | Schedule CG Part D deduction |
 
 ## E. Prior Year Losses — Schedule BFLA / CFL
 

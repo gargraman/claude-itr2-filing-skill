@@ -125,7 +125,7 @@ Individual slabs:
 
 ---
 
-## 4. Regime comparison worked example (₹40L gross salary + ₹1L Sec 80C + ₹25K 80D + ₹80K employer NPS 10% + no HRA)
+## 4. Regime comparison worked example (₹40L gross salary + ₹1.5L Sec 80C + ₹25K 80D + ₹80K employer NPS 10% + no HRA)
 
 ### Old regime:
 - Gross salary: ₹40,00,000

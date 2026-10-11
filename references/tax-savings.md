@@ -127,7 +127,7 @@ Priority order by lock-in / return / liquidity:
 ## 4. Cross-regime levers `[BOTH]`
 
 ### 4a. Sec 54EC — LTCG bonds on immovable property `[BOTH]`
-- Invest LTCG from sale of immovable property (any asset actually — Sec 54EC covers land or building or both) in NHAI, REC, PFC, or IRFC bonds within **6 months of transfer**.
+- Invest LTCG from sale of immovable property (land or building or both) in eligible 54EC bonds — **REC, PFC, IRFC, or HUDCO** — within **6 months of transfer**. (NHAI discontinued 54EC bond issuance from April 2022; HUDCO is notified eligible for bonds issued on/after 1-Apr-2025.)
 - Cap: **₹50L per FY** (aggregate across all bonds).
 - **5-year lock-in** (was 3 years pre-2018).
 - Bond interest ~5.25%, taxable.
@@ -170,7 +170,7 @@ Priority order by lock-in / return / liquidity:
 
 ### 4g. Foreign tax credit — file Form 67 on time `[BOTH]`
 - Not a deduction, but preserves credit that would otherwise be disallowed.
-- File Form 67 online BEFORE ITR upload (or same day). Rule 128(9). See `foreign-assets.md §4`.
+- Statutory deadline (Rule 128(9), as amended by CBDT Notification 100/2022): Form 67 may be filed any time up to the **end of the AY (31-Mar-2027)**, provided the ITR is filed within Sec 139(1)/139(4). **Practical rule: file it before or with the ITR** — CPC's automated 143(1) often disallows FTC when Form 67 post-dates the return, forcing rectification/appeal. See `foreign-assets.md §4`.
 - On ₹10L US dividend income with 25% US withholding = ₹2.5L FTC. Miss Form 67 = CPC disallows the ₹2.5L, you pay full Indian slab tax on it, then litigate to recover. Filing Form 67 is a 20-minute exercise.
 
 ### 4h. Advance tax to avoid 234B / 234C interest `[BOTH]`
@@ -290,7 +290,7 @@ For FY 2025-26 tax planning still in play:
 
 For AY 2026-27 filing (April-July 2026):
 
-- [ ] File Form 67 before ITR upload (if any FTC claim)
+- [ ] File Form 67 before/with ITR upload if any FTC claim (statutory deadline 31-Mar-2027, but file early to avoid CPC auto-disallowance)
 - [ ] File ITR by **31-July-2026** — belated kills capital loss c/f + forces new regime
 - [ ] Reconcile AIS + 26AS + Form 16 before generating final JSON (see SKILL.md Step 4)
 - [ ] Compute both regimes; pick winner; toggle regime flag in Part A-GEN

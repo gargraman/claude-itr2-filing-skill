@@ -35,7 +35,7 @@ Each template below has: **When to use**, the **template block**, and **rules fo
 
 ### ITR-3-specific downstream implications (only if ITR-3 selected)
 - Schedules BP, PL, BS, ICDS become mandatory
-- Sec 44AB audit threshold check needed (₹1 Cr / ₹10 Cr digital / ₹75L profession, or ₹50L profession non-digital)
+- Sec 44AB audit threshold check needed (business ₹1 Cr, or ₹10 Cr if cash ≤5%; profession **₹50 lakh flat** — note: ₹75L is the 44ADA *presumptive* cap, NOT an audit threshold)
 - Sec 44AA books requirement check needed
 - Form 10-IEA lifetime restriction if opting Old regime — see `regimes.md`
 - Audit case ITR due 31-Oct-2026 (not 31-July-2026); Form 3CB+3CD due 30-Sep-2026
@@ -459,7 +459,7 @@ Or reply with any correction — I will revise this summary and re-request confi
 - Practical position: <"broker Tax P&L + bank statements accepted in lieu of formal books" — flag Sec 271A risk if scrutiny>
 
 **Sec 44AB audit check**
-- Threshold: <₹1 Cr / ₹10 Cr digital / ₹75L profession> = <chosen>
+- Threshold: <business ₹1 Cr / ₹10 Cr if cash ≤5%; profession ₹50L flat (₹75L is the 44ADA presumptive cap, not an audit threshold)> = <chosen>
 - Turnover vs threshold: ₹<> vs ₹<> → audit REQUIRED / NOT REQUIRED
 - Sec 44AB(e) check (past 44AD election in last 5 years + current profit < 6%/8%): applicable? YES / NO
 - **If audit required:** Form 3CB+3CD by 30-Sep-2026, ITR by 31-Oct-2026 — CA sign-off mandatory.

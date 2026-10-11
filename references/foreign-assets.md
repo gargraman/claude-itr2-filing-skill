@@ -61,7 +61,7 @@ Catch-all — foreign consulting income, royalties, etc.
 
 **Key distinction:** The ₹20L threshold is **penalty relief only** — the disclosure obligation itself is unchanged (still no threshold). If you have a $50 broker account and don't disclose, the ₹10L penalty may be waived but you have still committed a Sec 42/43 default.
 
-**Enforcement:** CBDT NUDGE campaigns (Nov 2024, Nov 2025) using CRS / FATCA / AEOI data from foreign tax authorities. First campaign disclosed ₹29,208 Cr of previously-undisclosed foreign assets across 24,678 taxpayers. Assume the department has the data.
+**Enforcement:** CBDT NUDGE campaigns (Nov 2024, Nov 2025) using CRS / FATCA / AEOI data from foreign tax authorities. First campaign: ₹29,208 Cr of foreign assets declared by 30,161 taxpayers (AY 2024-25). Assume the department has the data.
 
 ### 1e. Currency conversion — Rule 115
 
